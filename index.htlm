@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Полухин Иван Дмитриевич — программист</title>
+  <meta name="description" content="Сайт-визитка Полухин Иван Дмитриевич — программист. Контакты, навыки, краткое резюме." />
+  <style>
+    :root{
+      --bg:#0f1724;
+      --card:#0b1220;
+      --accent:#6ee7b7;
+      --muted:#94a3b8;
+      --glass: rgba(255,255,255,0.03);
+      --radius:16px;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;background:linear-gradient(180deg,var(--bg) 0%, #08101a 100%);color:#e6eef8}
+    .container{max-width:980px;margin:48px auto;padding:28px}
+
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));backdrop-filter: blur(6px);border-radius:var(--radius);box-shadow:0 10px 30px rgba(2,6,23,0.6);padding:28px;display:grid;grid-template-columns:220px 1fr;gap:24px;align-items:start}
+
+    .photo{width:220px;height:220px;border-radius:50%;overflow:hidden;border:3px solid var(--accent);margin:0 auto}
+    .photo img{width:100%;height:100%;object-fit:cover}
+
+    h1{margin:0;font-size:22px}
+    .meta{color:var(--muted);font-size:14px;margin-top:6px}
+
+    .actions{margin-top:18px;display:flex;gap:10px}
+    .btn{padding:10px 14px;border-radius:12px;background:var(--glass);border:1px solid rgba(255,255,255,0.04);cursor:pointer;text-decoration:none;color:inherit;font-weight:600;font-size:14px}
+    .btn.primary{background:linear-gradient(90deg,var(--accent),#60a5fa);color:#052018;border:none;box-shadow:0 6px 18px rgba(110,231,183,0.12)}
+
+    .info{display:flex;flex-direction:column;gap:12px}
+    .section{background:transparent;padding:12px;border-radius:12px}
+    .section h3{margin:0 0 8px 0;font-size:15px}
+    .chips{display:flex;flex-wrap:wrap;gap:8px}
+    .chip{padding:8px 10px;border-radius:999px;background:rgba(255,255,255,0.03);font-size:13px;border:1px solid rgba(255,255,255,0.02)}
+
+    .qualities{display:grid;grid-template-columns:repeat(2, minmax(0,1fr));gap:10px}
+    .quality{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:10px;border-radius:10px;border:1px solid rgba(255,255,255,0.02)}
+    .quality strong{display:block}
+
+    .footer{margin-top:18px;color:var(--muted);font-size:13px}
+
+    @media (max-width:720px){
+      .card{grid-template-columns:1fr;}
+      .photo{width:140px;height:140px}
+      .actions{justify-content:center}
+      .qualities{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="card" role="main">
+      <div>
+        <div class="photo">
+          <img src="photo.jpg" alt="Фото Полухин Иван Дмитриевич" />
+        </div>
+
+        <div style="margin-top:14px;text-align:center">
+          <a class="btn primary" href="tel:+79803637466">Позвонить: +7 980 363-7466</a>
+        </div>
+
+        <div style="margin-top:14px;text-align:center;color:var(--muted);font-size:13px">Дата рождения: 03.01.2006</div>
+      </div>
+
+      <div class="info">
+        <div class="section">
+          <h1>Полухин Иван Дмитриевич</h1>
+          <div class="meta">Программист — разработка веб-приложений, автоматизация, алгоритмы</div>
+
+          <div class="actions">
+            <a class="btn" href="#about">О себе</a>
+            <a class="btn" href="#skills">Навыки</a>
+            <a class="btn" href="#qualities">Качества</a>
+            <a class="btn" href="#contacts">Контакты</a>
+          </div>
+        </div>
+
+        <div id="about" class="section">
+          <h3>Коротко обо мне</h3>
+          <p style="margin:0;color:var(--muted)">Я — молодой и целеустремлённый программист, увлечённый созданием чистого и эффективного кода. Люблю разбираться в новых технологиях и доводить проекты до рабочего результата.</p>
+        </div>
+
+        <div id="skills" class="section">
+          <h3>Навыки</h3>
+          <div class="chips">
+            <span class="chip">Python</span>
+            <span class="chip">Java</span>
+            <span class="chip">C++</span>
+            <span class="chip">HTML & CSS</span>
+          </div>
+        </div>
+
+        <div id="qualities" class="section">
+          <h3>Положительные качества</h3>
+          <div class="qualities">
+            <div class="quality"><strong>Ответственность</strong><span class="meta" style="color:var(--muted)">Подхожу к задачам серьёзно и довожу работу до конца.</span></div>
+            <div class="quality"><strong>Желание учиться</strong><span class="meta" style="color:var(--muted)">Постоянно осваиваю новые инструменты и практики.</span></div>
+            <div class="quality"><strong>Командная работа</strong><span class="meta" style="color:var(--muted)">Легко нахожу общий язык с коллегами и готов помогать.</span></div>
+            <div class="quality"><strong>Внимание к деталям</strong><span class="meta" style="color:var(--muted)">Пишу аккуратный код и тестирую решения.</span></div>
+          </div>
+        </div>
+
+        <div id="contacts" class="section">
+          <h3>Контакты</h3>
+          <p style="margin:0">Телефон: <a href="tel:+79803637466" style="color:var(--accent);text-decoration:none">+7 980 363-7466</a></p>
+        </div>
+
+        <div class="footer">© Полухин Иван Дмитриевич — сайт-визитка. По желанию могу добавить портфолио, ссылки на GitHub или CV.</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
